@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"; // Nota: Ajustado a 'fr
 const fotoSentado = new URL("../img/c-sentado.JPG", import.meta.url).href;
 const fotoAbrazado = new URL("../img/b-abrazado.JPG", import.meta.url).href;
 const fotoAbrazo = new URL("../img/c-abrazo.JPG", import.meta.url).href;
-const fotoPlaya = new URL("../img/b-sentado.jpg", import.meta.url).href;
+const fotoPlaya = new URL("../img/b-sentado.JPG", import.meta.url).href;
 
 // ─── Palette ───────────────────────────────────────────────────────────────
 const GOLD = "#C5A059";
@@ -764,7 +764,7 @@ function CountdownSection() {
   return (
     <section style={{
       padding: "7rem 1.5rem",
-      background: `linear-gradient(rgba(0,0,0,0.45), rgba(94, 92, 92, 0.45)), url(${new URL("../img/DSC08716.jpg", import.meta.url)}) center/cover no-repeat`,
+      background: `linear-gradient(rgba(0,0,0,0.45), rgba(94,92,92,0.45)), url(${new URL("../img/DSC08716.jpg", import.meta.url).href})center/cover no-repeat`,
       textAlign: "center",
       position: "relative",
       overflow: "hidden",
