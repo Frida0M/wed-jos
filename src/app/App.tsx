@@ -18,7 +18,7 @@ const sans = "'Montserrat', sans-serif";
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-  <p style={{ fontFamily: sans, fontSize: "0.65rem", letterSpacing: "0.28em", textTransform: "uppercase", color: GOLD, marginBottom: "0.75rem", fontWeight: 500 }}>
+  <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.28em", textTransform: "uppercase", color: GOLD, marginBottom: "0.75rem", fontWeight: 500 }}>
     {children}
     </p>
     );
@@ -108,7 +108,7 @@ function HeroSection({ opened, onOpen }: HeroSectionProps) {
       <div style={{ position: "absolute", bottom: "5%", left: "5%", width: 280, height: 280, borderRadius: "50%", background: "radial-gradient(circle, rgba(112,134,114,0.1) 0%, transparent 70%)", pointerEvents: "none" }} />
 
       {/* Date ribbon */}
-      <p style={{ fontFamily: sans, fontSize: "0.6rem", letterSpacing: "0.35em", textTransform: "uppercase", color: SAGE, marginBottom: "2.5rem", fontWeight: 800 }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.35em", textTransform: "uppercase", color: SAGE, marginBottom: "2.5rem", fontWeight: 800 }}>
         19 · Diciembre · 2026
       </p>
 
@@ -175,9 +175,9 @@ function HeroSection({ opened, onOpen }: HeroSectionProps) {
                   textAlign: "center", zIndex: 5,
                 }}
               >
-                <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "0.75rem", color: GOLD, marginBottom: "0.5rem", letterSpacing: "0.1em" }}>Con la bendición de nuestras familias</p>
+                <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1rem", color: GOLD, marginBottom: "0.5rem", letterSpacing: "0.1em" }}>Con la bendición de nuestras familias</p>
                 <p style={{ fontFamily: serif, fontSize: "1.6rem", color: INK, lineHeight: 1.2, fontWeight: 300 }}>Josseline & Eduardo</p>
-                <p style={{ fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.2em", color: SAGE, marginTop: "0.5rem", textTransform: "uppercase" }}>Nos casamos</p>
+                <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.2em", color: SAGE, marginTop: "0.5rem", textTransform: "uppercase" }}>Nos casamos</p>
               </motion.div>
             )}
           </AnimatePresence>
@@ -209,7 +209,7 @@ function HeroSection({ opened, onOpen }: HeroSectionProps) {
       {!opened ? (
         <motion.p
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
-          style={{ fontFamily: sans, fontSize: "0.6rem", letterSpacing: "0.2em", color: INK, marginTop: "2rem", textTransform: "uppercase",fontWeight: 800 }}
+          style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.2em", color: INK, marginTop: "2rem", textTransform: "uppercase",fontWeight: 800 }}
         >
           Toca para abrir
         </motion.p>
@@ -228,7 +228,7 @@ function HeroSection({ opened, onOpen }: HeroSectionProps) {
       <div style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background:"#faf9f6ed", border: `1px solid rgba(197,160,89,0.25)`, borderRadius: 24, padding: "0.4rem 1rem", marginBottom: "2.5rem" }}>
         {/* Cambiado stroke-width a strokeWidth para JSX válido */}
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke={GOLD} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
-        <span style={{ fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.15em", color: "#8a7040", textTransform: "uppercase" }}>2 personas</span>
+        <span style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.15em", color: "#8a7040", textTransform: "uppercase" }}>2 personas</span>
       </div>
 
       <br />
@@ -325,8 +325,8 @@ function MusicWidget({ playing, setPlaying, onReady }: MusicWidgetProps) {
               boxShadow: playing ? `0 8px 32px rgba(112,134,114,0.2), 0 0 24px rgba(112,134,114,0.15)` : "0 8px 32px rgba(0,0,0,0.06)",
             }}
           >
-            <p style={{ fontFamily: serif, fontSize: "0.95rem", color: INK, fontWeight: 400, marginBottom: "0.1rem" }}>{SINGLE_TRACK.title}</p>
-            <p style={{ fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.15em", color: SAGE, textTransform: "uppercase", marginBottom: "0.75rem" }}>{SINGLE_TRACK.artist}</p>
+            <p style={{ fontFamily: serif, fontSize: "1rem", color: INK, fontWeight: 400, marginBottom: "0.1rem" }}>{SINGLE_TRACK.title}</p>
+            <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.15em", color: SAGE, textTransform: "uppercase", marginBottom: "0.75rem" }}>{SINGLE_TRACK.artist}</p>
             
             {/* Barra de progreso */}
             <div style={{ height: 1, background: `rgba(197,160,89,0.2)`, borderRadius: 1, marginBottom: "0.75rem", position: "relative" }}>
@@ -342,7 +342,7 @@ function MusicWidget({ playing, setPlaying, onReady }: MusicWidgetProps) {
                 }
               </button>
               
-              <span style={{ fontFamily: sans, fontSize: "0.55rem", color: "#a09282" }}>{fmt(elapsed)} / {fmt(SINGLE_TRACK.duration)}</span>
+              <span style={{ fontFamily: sans, fontSize: "1rem", color: "#a09282" }}>{fmt(elapsed)} / {fmt(SINGLE_TRACK.duration)}</span>
             </div>
           </motion.div>
         )}
@@ -401,18 +401,18 @@ function PadresSection() {
       <h2 style={{ fontFamily: serif, fontSize: "clamp(2rem,5vw,3.2rem)", fontWeight: 300, color: INK, marginBottom: "0.5rem", lineHeight: 1.15 }}>
         Con su amor y bendición
       </h2>
-      <p style={{ fontFamily: sans, fontSize: "0.75rem", color: SAGE, marginBottom: "3.5rem", letterSpacing: "0.05em", maxWidth: 380, margin: "0 auto 3.5rem" }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, marginBottom: "3.5rem", letterSpacing: "0.05em", maxWidth: 380, margin: "0 auto 3.5rem" }}>
         Quienes nos han guiado y apoyado en este camino
       </p>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "2px", maxWidth: 780, margin: "0 auto" }}>
         {families.map((fam, fi) => (
           <div key={fi} style={{ padding: "2.5rem 2rem", background: fi === 0 ? "#f5f2eb" : SAND, borderRadius: 8, border: `1px solid rgba(197,160,89,0.15)` }}>
-            <p style={{ fontFamily: sans, fontSize: "0.55rem", letterSpacing: "0.25em", textTransform: "uppercase", color: GOLD, marginBottom: "1.5rem", fontWeight: 500 }}>{fam.side}</p>
+            <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.25em", textTransform: "uppercase", color: GOLD, marginBottom: "1.5rem", fontWeight: 500 }}>{fam.side}</p>
             {fam.parents.map((p, pi) => (
               <div key={pi} style={{ marginBottom: pi < fam.parents.length - 1 ? "1.25rem" : 0 }}>
                 <p style={{ fontFamily: serif, fontSize: "1.15rem", color: INK, fontWeight: 400, marginBottom: "0.15rem" }}>{p.name}</p>
-                <p style={{ fontFamily: sans, fontSize: "0.6rem", color: SAGE, letterSpacing: "0.08em" }}>{p.role}</p>
+                <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, letterSpacing: "0.08em" }}>{p.role}</p>
               </div>
             ))}
           </div>
@@ -444,7 +444,7 @@ function HistoriaSection() {
       <h2 style={{ fontFamily: serif, fontSize: "clamp(2rem,5vw,3.2rem)", fontWeight: 300, color: INK, marginBottom: "1.5rem", lineHeight: 1.15 }}>
         El camino hasta aquí
       </h2>
-      <p style={{ fontFamily: sans, fontSize: "0.8rem", color: SAGE, marginBottom: "2.5rem", maxWidth: 520, margin: "0 auto 3.5rem" }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, marginBottom: "2.5rem", maxWidth: 520, margin: "0 auto 3.5rem" }}>
         Dicen que algunas historias de amor comienzan con una mirada… la nuestra comenzó con crayones y un salón de kínder.
       </p>
 
@@ -473,7 +473,7 @@ function HistoriaSection() {
               {isEven ? (
                 <div>
                   {/* <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p> */}
-                  <p style={{ fontFamily: sans, fontSize: "0.8rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
+                  <p style={{ fontFamily: sans, fontSize: "1rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
                 </div>
               ) : (
                 <div style={{ borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
@@ -496,7 +496,7 @@ function HistoriaSection() {
               ) : (
                 <div style={{textAlign: "left" }}>
                   {/* <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p> */}
-                  <p style={{ fontFamily: sans, fontSize: "0.8rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
+                  <p style={{ fontFamily: sans, fontSize: "1rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
                 </div>
               )}
             </motion.div>
@@ -506,7 +506,7 @@ function HistoriaSection() {
       <br></br>
       <br></br>
       <br></br>
-      <p style={{ fontFamily: sans, fontSize: "0.8rem", color: SAGE, marginBottom: "2.5rem", maxWidth: 520, margin: "0 auto 3.5rem" }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, marginBottom: "2.5rem", maxWidth: 520, margin: "0 auto 3.5rem" }}>
         Porque algunas historias simplemente estaban destinadas a encontrarse… una y otra vez.
       </p>
     </section>
@@ -536,15 +536,15 @@ function CeremonySection() {
             19 de Diciembre<br />
             <span style={{ fontStyle: "italic", color: SAGE }}>2026</span>
           </p>
-          <p style={{ fontFamily: sans, fontSize: "0.7rem", color: SAGE, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "1.5rem" }}>5:00 PM · Hora local</p>
+          <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, letterSpacing: "0.15em", textTransform: "uppercase", marginBottom: "1.5rem" }}>5:00 PM · Hora local</p>
           <div style={{ height: 1, background: `rgba(197,160,89,0.2)`, marginBottom: "1.25rem" }} />
           {[
             { label: "Ceremonia civil", val: "5:00 PM — Playa Principal" },
             { label: "Recepción", val: "6:00 PM — Salón Palma Real" },
           ].map((row, i) => (
             <div key={i} style={{ marginBottom: i < 2 ? "0.75rem" : 0 }}>
-              <p style={{ fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: GOLD, marginBottom: "0.15rem" }}>{row.label}</p>
-              <p style={{ fontFamily: serif, fontSize: "0.9rem", color: INK }}>{row.val}</p>
+              <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.18em", textTransform: "uppercase", color: GOLD, marginBottom: "0.15rem" }}>{row.label}</p>
+              <p style={{ fontFamily: serif, fontSize: "1rem", color: INK }}>{row.val}</p>
             </div>
           ))}
         </div>
@@ -559,8 +559,8 @@ function CeremonySection() {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(46,43,37,0.5) 0%, transparent 60%)" }} />
           <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", right: "1.5rem" }}>
             <p style={{ fontFamily: serif, fontSize: "1.1rem", color: SAND, marginBottom: "0.25rem" }}>Salón Palma Real</p>
-            <p style={{ fontFamily: sans, fontSize: "0.6rem", letterSpacing: "0.12em", color: "rgba(250,249,246,0.8)", textTransform: "uppercase" }}>Blvd. Mariano Matamoros S/N, Puerto Arista, Chiapas</p>
-            <a href="https://maps.app.goo.gl/cvX8Y9EjtA1krsSH7?g_st=iw" style={{ display: "inline-block", marginTop: "0.75rem", fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, textDecoration: "none", border: `1px solid ${SAND}60`, borderRadius: 4, padding: "0.4rem 0.85rem" }}>
+            <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.12em", color: "rgba(250,249,246,0.8)", textTransform: "uppercase" }}>Blvd. Mariano Matamoros S/N, Puerto Arista, Chiapas</p>
+            <a href="https://maps.app.goo.gl/cvX8Y9EjtA1krsSH7?g_st=iw" style={{ display: "inline-block", marginTop: "0.75rem", fontFamily: sans, fontSize: "1rem", letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, textDecoration: "none", border: `1px solid ${SAND}60`, borderRadius: 4, padding: "0.4rem 0.85rem" }}>
               Ver en Maps →
             </a>
           </div>
@@ -612,11 +612,11 @@ function ItinerarySection() {
             }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.75rem" }}>
-              <span style={{ fontFamily: sans, fontSize: "0.6rem", letterSpacing: "0.15em", color: GOLD, fontWeight: 500 }}>{item.time}</span>
+              <span style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.15em", color: GOLD, fontWeight: 500 }}>{item.time}</span>
               <span style={{ fontSize: "1.1rem" }}>{item.icon}</span>
             </div>
             <p style={{ fontFamily: serif, fontSize: "1rem", color: INK, fontWeight: 500, marginBottom: "0.3rem" }}>{item.event}</p>
-            <p style={{ fontFamily: sans, fontSize: "0.62rem", color: SAGE, lineHeight: 1.55, fontWeight: 300 }}>{item.note}</p>
+            <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, lineHeight: 1.55, fontWeight: 300 }}>{item.note}</p>
           </motion.div>
         ))}
       </div>
@@ -678,17 +678,17 @@ function InfoSection() {
         {cards.map((card, i) => (
           <div key={i} style={{ background: "#f5f2eb", borderRadius: 8, border: `1px solid rgba(197,160,89,0.15)`, padding: "2rem 1.75rem", textAlign: "left" }}>
             <div style={{ marginBottom: "1rem" }}>{card.icon}</div>
-            <span style={{ display: "inline-block", fontFamily: sans, fontSize: "0.5rem", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, border: `1px solid rgba(197,160,89,0.35)`, borderRadius: 3, padding: "0.25rem 0.6rem", marginBottom: "0.75rem" }}>{card.tag}</span>
+            <span style={{ display: "inline-block", fontFamily: sans, fontSize: "1rem", letterSpacing: "0.2em", textTransform: "uppercase", color: GOLD, border: `1px solid rgba(197,160,89,0.35)`, borderRadius: 3, padding: "0.25rem 0.6rem", marginBottom: "0.75rem" }}>{card.tag}</span>
             <h3 style={{ fontFamily: serif, fontSize: "1.2rem", color: INK, fontWeight: 500, marginBottom: "0.6rem" }}>{card.title}</h3>
-            <p style={{ fontFamily: sans, fontSize: "0.68rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{card.content}</p>
+            <p style={{ fontFamily: sans, fontSize: "1rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{card.content}</p>
             {card.extra && (
               <div style={{ marginTop: "1rem", padding: "0.75rem", background: "rgba(197,160,89,0.06)", borderRadius: 6, border: `1px solid rgba(197,160,89,0.15)` }}>
-                <p style={{ fontFamily: "monospace", fontSize: "0.62rem", color: SAGE, lineHeight: 1.6, whiteSpace: "pre-line" }}>{card.extra}</p>
+                <p style={{ fontFamily: "monospace", fontSize: "1rem", color: SAGE, lineHeight: 1.6, whiteSpace: "pre-line" }}>{card.extra}</p>
               </div>
             )}
             {card.extra2 && (
               <div style={{ marginTop: "1rem", padding: "0.75rem", background: "rgba(197,160,89,0.06)", borderRadius: 6, border: `1px solid rgba(197,160,89,0.15)` }}>
-                <p style={{ fontFamily: "monospace", fontSize: "0.62rem", color: SAGE, lineHeight: 1.6, whiteSpace: "pre-line" }}>{card.extra2}</p>
+                <p style={{ fontFamily: "monospace", fontSize: "1rem", color: SAGE, lineHeight: 1.6, whiteSpace: "pre-line" }}>{card.extra2}</p>
               </div>
             )}
           </div>
@@ -713,7 +713,7 @@ function LodgingSection() {
       <h2 style={{ fontFamily: serif, fontSize: "clamp(2rem,5vw,3.2rem)", fontWeight: 300, color: INK, marginBottom: "0.5rem", lineHeight: 1.15 }}>
         Dónde quedarse
       </h2>
-      <p style={{ fontFamily: sans, fontSize: "0.72rem", color: SAGE, marginBottom: "3.5rem", maxWidth: 420, margin: "0 auto 3.5rem" }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, marginBottom: "3.5rem", maxWidth: 420, margin: "0 auto 3.5rem" }}>
         Hemos recopilado algunas sugerencias de lugares cerca de nuestra gran fiesta.
       </p>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem", maxWidth: 820, margin: "0 auto" }}>
@@ -724,13 +724,13 @@ function LodgingSection() {
             </div>
             <div style={{ padding: "1.5rem" }}>
               <h3 style={{ fontFamily: serif, fontSize: "1.15rem", color: INK, fontWeight: 400, marginBottom: "0.3rem" }}>{h.name}</h3>
-              <p style={{ fontFamily: sans, fontSize: "0.65rem", color: GOLD, fontWeight: 500, marginBottom: "0.75rem" }}>{h.price}</p>
-              <p style={{ fontFamily: sans, fontSize: "0.62rem", color: "#7a7060", lineHeight: 1.6, marginBottom: "1rem" }}>{h.perks}</p>
+              <p style={{ fontFamily: sans, fontSize: "1rem", color: GOLD, fontWeight: 500, marginBottom: "0.75rem" }}>{h.price}</p>
+              <p style={{ fontFamily: sans, fontSize: "1rem", color: "#7a7060", lineHeight: 1.6, marginBottom: "1rem" }}>{h.perks}</p>
               <a
         href={h.cat}
         target="_blank"
         rel="noopener noreferrer"
-        style={{ display: "inline-block", marginBottom: "0.5rem", fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.18em", textTransform: "uppercase", color: GOLD, textDecoration: "none", border: `1px solid ${GOLD}60`, borderRadius: 4, padding: "0.4rem 0.85rem" }}
+        style={{ display: "inline-block", marginBottom: "0.5rem", fontFamily: sans, fontSize: "1rem", letterSpacing: "0.18em", textTransform: "uppercase", color: GOLD, textDecoration: "none", border: `1px solid ${GOLD}60`, borderRadius: 4, padding: "0.4rem 0.85rem" }}
       >
         Ver en Maps →
               </a>
@@ -790,7 +790,7 @@ function CountdownSection() {
             }}>
               {String(u.val).padStart(2, "0")}
             </div>
-            <p style={{fontFamily: sans, fontSize: "0.8rem", letterSpacing: "0.25em", textTransform: "uppercase", color: SAND, fontWeight: 500}}>{u.label}</p>
+            <p style={{fontFamily: sans, fontSize: "1rem", letterSpacing: "0.25em", textTransform: "uppercase", color: SAND, fontWeight: 500}}>{u.label}</p>
           </div>
         ))}
       </div>
@@ -812,7 +812,7 @@ function RSVPSection() {
       <h2 style={{ fontFamily: serif, fontSize: "clamp(2.2rem,5vw,3.6rem)", fontWeight: 300, color: INK, lineHeight: 1.1, marginBottom: "1rem" }}>
         ¿Nos acompañas?
       </h2>
-      <p style={{ fontFamily: sans, fontSize: "0.72rem", color: SAGE, lineHeight: 1.75, maxWidth: 420, margin: "0 auto 0.5rem", fontWeight: 300 }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: SAGE, lineHeight: 1.75, maxWidth: 420, margin: "0 auto 0.5rem", fontWeight: 300 }}>
         Queremos tenerte con nosotros en este día tan especial. Por favor confirma tu asistencia antes de
       </p>
       <br/>
@@ -822,7 +822,7 @@ function RSVPSection() {
           <circle cx="5" cy="5" r="4" stroke={GOLD} strokeWidth="1.2" />
           <path d="M5 2.5V5L6.5 6.5" stroke={GOLD} strokeWidth="1.2" strokeLinecap="round" />
         </svg>
-        <span style={{ fontFamily: sans, fontSize: "0.58rem", letterSpacing: "0.15em", color: "#8a7040", textTransform: "uppercase" }}>Fecha límite: 15 Sep 2026</span>
+        <span style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.15em", color: "#8a7040", textTransform: "uppercase" }}>Fecha límite: 15 Sep 2026</span>
       </div>
 
       <br />
@@ -834,7 +834,7 @@ function RSVPSection() {
         style={{
           display: "inline-flex", alignItems: "center", gap: "0.75rem",
           background: SAGE, color: SAND, textDecoration: "none",
-          fontFamily: sans, fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 500,
+          fontFamily: sans, fontSize: "1rem", letterSpacing: "0.2em", textTransform: "uppercase", fontWeight: 500,
           padding: "1rem 2.5rem", borderRadius: 8,
           boxShadow: `0 8px 24px rgba(112,134,114,0.3)`,
           transition: "transform 0.2s ease, box-shadow 0.2s ease",
@@ -849,7 +849,7 @@ function RSVPSection() {
         Confirmar por WhatsApp
       </a>
 
-      <p style={{ fontFamily: sans, fontSize: "0.58rem", color: "#b0a898", marginTop: "1.5rem", letterSpacing: "0.05em" }}>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: "#b0a898", marginTop: "1.5rem", letterSpacing: "0.05em" }}>
         También puedes escribirnos directamente: 999 113 7056
       </p>
     </section>
@@ -861,9 +861,9 @@ function Footer() {
   return (
     <footer style={{ padding: "3rem 1.5rem", background: "#f0ede4", textAlign: "center", borderTop: `1px solid rgba(197,160,89,0.15)` }}>
       <p style={{ fontFamily: serif, fontStyle: "italic", fontSize: "1.4rem", color: INK, fontWeight: 300, marginBottom: "0.5rem" }}>Josseline &amp; Alexis Eduardo</p>
-      <p style={{ fontFamily: sans, fontSize: "0.55rem", letterSpacing: "0.25em", textTransform: "uppercase", color: SAGE, marginBottom: "1.5rem" }}>19 · Diciembre · 2026 · Puerto Arista</p>
+      <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.25em", textTransform: "uppercase", color: SAGE, marginBottom: "1.5rem" }}>19 · Diciembre · 2026 · Puerto Arista</p>
       <div style={{ width: 32, height: "1px", background: GOLD, margin: "0 auto", opacity: 0.5 }} />
-      <p style={{ fontFamily: sans, fontSize: "0.55rem", color: "#b0a898", marginTop: "1.5rem", letterSpacing: "0.08em" }}>Hecho con amor para nuestra familia y amigos</p>
+      <p style={{ fontFamily: sans, fontSize: "1rem", color: "#b0a898", marginTop: "1.5rem", letterSpacing: "0.08em" }}>Hecho con amor para nuestra familia y amigos</p>
     </footer>
   );
 }
