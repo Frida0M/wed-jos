@@ -764,7 +764,7 @@ function CountdownSection() {
   return (
     <section style={{
       padding: "7rem 1.5rem",
-      background: `linear-gradient(rgba(0,0,0,0.45), rgba(94,92,92,0.45)), url(${new URL("../img/DSC08716.jpg", import.meta.url).href})center/cover no-repeat`,
+      background: `linear-gradient(rgba(0,0,0,0.45), rgba(94,92,92,0.45)), url(${new URL("../img/DSC08716.JPG", import.meta.url).href})center/cover no-repeat`,
       textAlign: "center",
       position: "relative",
       overflow: "hidden",
