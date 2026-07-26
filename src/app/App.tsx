@@ -544,7 +544,7 @@ function CeremonySection() {
           ].map((row, i) => (
             <div key={i} style={{ marginBottom: i < 2 ? "0.75rem" : 0 }}>
               <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.18em", textTransform: "uppercase", color: GOLD, marginBottom: "0.15rem" }}>{row.label}</p>
-              <p style={{ fontFamily: serif, fontSize: "1rem", color: INK }}>{row.val}</p>
+              <p style={{ fontFamily: serif, fontSize: "1.3rem", color: INK }}>{row.val}</p>
             </div>
           ))}
         </div>
@@ -559,8 +559,8 @@ function CeremonySection() {
           <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(46,43,37,0.5) 0%, transparent 60%)" }} />
           <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", right: "1.5rem" }}>
             <p style={{ fontFamily: serif, fontSize: "1.1rem", color: SAND, marginBottom: "0.25rem" }}>Salón Palma Real</p>
-            <p style={{ fontFamily: sans, fontSize: "1rem", letterSpacing: "0.12em", color: "rgba(250,249,246,0.8)", textTransform: "uppercase" }}>Blvd. Mariano Matamoros S/N, Puerto Arista, Chiapas</p>
-            <a href="https://maps.app.goo.gl/cvX8Y9EjtA1krsSH7?g_st=iw" style={{ display: "inline-block", marginTop: "0.75rem", fontFamily: sans, fontSize: "1rem", letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, textDecoration: "none", border: `1px solid ${SAND}60`, borderRadius: 4, padding: "0.4rem 0.85rem" }}>
+            <p style={{ fontFamily: sans, fontSize: "0.8rem", letterSpacing: "0.12em", color: "rgba(250,249,246,0.8)", textTransform: "uppercase" }}>Blvd. Mariano Matamoros S/N, Puerto Arista, Chiapas</p>
+            <a href="https://maps.app.goo.gl/cvX8Y9EjtA1krsSH7?g_st=iw" style={{ display: "inline-block", marginTop: "0.75rem", fontFamily: sans, fontSize: "0.8rem", letterSpacing: "0.18em", textTransform: "uppercase", color: SAND, textDecoration: "none", border: `1px solid ${SAND}60`, borderRadius: 4, padding: "0.4rem 0.85rem" }}>
               Ver en Maps →
             </a>
           </div>
