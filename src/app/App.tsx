@@ -429,12 +429,10 @@ function PadresSection() {
 
 // ─── 4. Nuestra Historia ───────────────────────────────────────────────────
 const HISTORIA = [
-  { title: "El primer encuentro", body: "Éramos apenas unos niños en 1999 aprendiendo a colorear, y entre casualidades (o quizá planes de Dios), casi siempre nos tocaba bailar juntos en los festivales escolares.", img: fotoSentado, imgAlt: "Pareja en la ciudad" },
-  { title: "Un reencuentro inesperado", 
-    body: "Los años pasaron y, en la preparatoria, la amistad nos volvió a reunir. Entre risas, conversaciones y momentos compartidos, nunca dejamos de estar presentes en la vida del otro. Siempre hubo un cariño sincero que permaneció con el tiempo.", img: fotoAbrazado, imgAlt: "Pareja bailando entre árboles" },
-  { title: "Cuando la amistad se convirtió en amor", 
-    body: "Hasta que un día decidimos darle una oportunidad al amor y descubrimos que compartíamos sueños, valores y la misma ilusión de construir un futuro juntos.", img: fotoAbrazo, imgAlt: "Momento íntimo en pareja" },
-  { title:"El inicio de nuestro para siempre", body: "Hoy, con Dios en el centro de nuestra vida y la certeza de que queremos caminar juntos para siempre.", img: fotoPlaya, imgAlt:"Pareja caminando en la playa" },
+  { body: "Éramos apenas unos niños en 1999 aprendiendo a colorear, y entre casualidades (o quizá planes de Dios), casi siempre nos tocaba bailar juntos en los festivales escolares.", img: fotoSentado, imgAlt: "Pareja en la ciudad" },
+  { body: "Los años pasaron y, en la preparatoria, la amistad nos volvió a reunir. Entre risas, conversaciones y momentos compartidos, nunca dejamos de estar presentes en la vida del otro. Siempre hubo un cariño sincero que permaneció con el tiempo.", img: fotoAbrazado, imgAlt: "Pareja bailando entre árboles" },
+  { body: "Hasta que un día decidimos darle una oportunidad al amor y descubrimos que compartíamos sueños, valores y la misma ilusión de construir un futuro juntos.", img: fotoAbrazo, imgAlt: "Momento íntimo en pareja" },
+  { body: "Hoy, con Dios en el centro de nuestra vida y la certeza de que queremos caminar juntos para siempre.", img: fotoPlaya, imgAlt:"Pareja caminando en la playa" },
   //{ title: "La propuesta", body: "Al atardecer frente al mar, con los pies en la arena y los corazones llenos, Alexis Eduardo le pidió matrimonio a Sofía.", img: "https://images.unsplash.com/photo-1591969851586-adbbd4accf81?w=400&h=320&fit=crop&auto=format", imgAlt: "Silueta al atardecer en la playa" },
   //{ title: "Para siempre", body: "Hoy celebramos nuestro amor rodeados de quienes más queremos, a orillas del Caribe.", img: "https://images.unsplash.com/photo-1768611262527-2b22941ac27f?w=400&h=320&fit=crop&auto=format", imgAlt: "Pareja caminando en la playa" },
 ];
@@ -467,20 +465,20 @@ function HistoriaSection() {
                 display: "grid",
                 gridTemplateColumns: "1fr 40px 1fr",
                 alignItems: "center",
-                gap: "0 1.5rem",
+                gap: "0 0.5rem",
                 textAlign: isEven ? "right" : "left",
               }}
             >
               {/* Left slot */}
               {isEven ? (
-                <div style={{ paddingRight: "0.5rem" }}>
-                  <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p>
-                  <p style={{ fontFamily: sans, fontSize: "0.68rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
+                <div>
+                  {/* <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p> */}
+                  <p style={{ fontFamily: sans, fontSize: "0.8rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
                 </div>
               ) : (
-                <div style={{ paddingRight: "0.5rem", borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
+                <div style={{ borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
                   <img src={item.img} alt={item.imgAlt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 8 }} />
-                  <div style={{ position: "absolute", inset: 0, borderRadius: 8, boxShadow: "inset 0 0 0 1px rgba(197,160,89,0.18)" }} />
+                  <div style={{ position: "absolute", inset: 0, borderRadius: 8}} />
                 </div>
               )}
 
@@ -491,14 +489,14 @@ function HistoriaSection() {
 
               {/* Right slot */}
               {isEven ? (
-                <div style={{ paddingLeft: "0.5rem", borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
+                <div style={{ borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
                   <img src={item.img} alt={item.imgAlt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 8 }} />
-                  <div style={{ position: "absolute", inset: 0, borderRadius: 8, boxShadow: "inset 0 0 0 1px rgba(197,160,89,0.18)" }} />
+                  <div style={{ position: "absolute", inset: 0, borderRadius: 8}} />
                 </div>
               ) : (
-                <div style={{ paddingLeft: "0.5rem", textAlign: "left" }}>
-                  <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p>
-                  <p style={{ fontFamily: sans, fontSize: "0.68rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
+                <div style={{textAlign: "left" }}>
+                  {/* <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p> */}
+                  <p style={{ fontFamily: sans, fontSize: "0.8rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
                 </div>
               )}
             </motion.div>
@@ -663,6 +661,7 @@ function InfoSection() {
       content: "Lo más importante para nosotros es compartir este día contigo. Si además deseas hacernos un obsequio, con mucho cariño agradeceremos una contribución para nuestro nuevo hogar, ya sea mediante transferencia bancaria o personalmente el día de la celebración.",
       tag: "Transferencia CLABE",
       extra: "CLABE: 012 680 015 587 187 027\nBanco BBVA\nJosseline Carrasco Martínez",
+      extra2: "CLABE: 012 616 015 737 972 331\nBanco BBVA\nAlexis Eduardo Enríquez Castillo",
     },
   ];
 
@@ -685,6 +684,11 @@ function InfoSection() {
             {card.extra && (
               <div style={{ marginTop: "1rem", padding: "0.75rem", background: "rgba(197,160,89,0.06)", borderRadius: 6, border: `1px solid rgba(197,160,89,0.15)` }}>
                 <p style={{ fontFamily: "monospace", fontSize: "0.62rem", color: SAGE, lineHeight: 1.6, whiteSpace: "pre-line" }}>{card.extra}</p>
+              </div>
+            )}
+            {card.extra2 && (
+              <div style={{ marginTop: "1rem", padding: "0.75rem", background: "rgba(197,160,89,0.06)", borderRadius: 6, border: `1px solid rgba(197,160,89,0.15)` }}>
+                <p style={{ fontFamily: "monospace", fontSize: "0.62rem", color: SAGE, lineHeight: 1.6, whiteSpace: "pre-line" }}>{card.extra2}</p>
               </div>
             )}
           </div>

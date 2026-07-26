@@ -183,6 +183,9 @@ importers:
         specifier: 1.1.2
         version: 1.1.2(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
+      '@rollup/rollup-darwin-arm64':
+        specifier: 4.62.2
+        version: 4.62.2
       '@tailwindcss/vite':
         specifier: 4.1.12
         version: 4.1.12(vite@6.4.3(jiti@2.7.0)(lightningcss@1.30.1))
@@ -1715,8 +1718,8 @@ packages:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
     engines: {node: '>=10', npm: '>=6'}
 
-  baseline-browser-mapping@2.11.1:
-    resolution: {integrity: sha512-HYXq73DDpCtNzOmrFsm9eSwCvWCql0RzqjpDzXN9EadiLJ4DNat0nsZ/Bzmy+Ud12mb4/zKDY0cQ805ZzN+i0A==}
+  baseline-browser-mapping@2.11.3:
+    resolution: {integrity: sha512-sbT0Ui/CZwyAyy7icT1Gw5P1LKRlFaHwaF6tDCW5YHq2X5SeeZFphBuIagopSfwSSZq3sQcbmEL072yphxm7ew==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -3568,8 +3571,7 @@ snapshots:
   '@rollup/rollup-android-arm64@4.62.2':
     optional: true
 
-  '@rollup/rollup-darwin-arm64@4.62.2':
-    optional: true
+  '@rollup/rollup-darwin-arm64@4.62.2': {}
 
   '@rollup/rollup-darwin-x64@4.62.2':
     optional: true
@@ -3853,11 +3855,11 @@ snapshots:
       cosmiconfig: 7.1.0
       resolve: 1.22.12
 
-  baseline-browser-mapping@2.11.1: {}
+  baseline-browser-mapping@2.11.3: {}
 
   browserslist@4.28.7:
     dependencies:
-      baseline-browser-mapping: 2.11.1
+      baseline-browser-mapping: 2.11.3
       caniuse-lite: 1.0.30001806
       electron-to-chromium: 1.5.396
       node-releases: 2.0.51
