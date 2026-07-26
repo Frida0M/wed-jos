@@ -1,13 +1,10 @@
 # Dependencias
 node_modules/
+dist/
 
 # IDE
 .vscode/
 .idea/
-
-# Production build
-dist/
-
 # Local environment variables
 .env
 .env.*
