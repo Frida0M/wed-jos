@@ -1,5 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion"; // Nota: Ajustado a 'framer-motion' estándar si usas v11-
+const fotoSentado = new URL("../img/c-sentado.JPG", import.meta.url).href;
+const fotoAbrazado = new URL("../img/b-abrazado.JPG", import.meta.url).href;
+const fotoAbrazo = new URL("../img/c-abrazo.JPG", import.meta.url).href;
+const fotoPlaya = new URL("../img/b-sentado.jpg", import.meta.url).href;
 
 // ─── Palette ───────────────────────────────────────────────────────────────
 const GOLD = "#C5A059";
@@ -13,18 +17,12 @@ const sans = "'Montserrat', sans-serif";
 // ─── Helpers ───────────────────────────────────────────────────────────────
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
-
-return (
-
-<p style={{ fontFamily: sans, fontSize: "0.65rem", letterSpacing: "0.28em", textTransform: "uppercase", color: GOLD, marginBottom: "0.75rem", fontWeight: 500 }}>
-
-{children}
-
-</p>
-
-);
-
-}
+  return (
+  <p style={{ fontFamily: sans, fontSize: "0.65rem", letterSpacing: "0.28em", textTransform: "uppercase", color: GOLD, marginBottom: "0.75rem", fontWeight: 500 }}>
+    {children}
+    </p>
+    );
+  }
 
 function Divider() {
 
@@ -431,12 +429,12 @@ function PadresSection() {
 
 // ─── 4. Nuestra Historia ───────────────────────────────────────────────────
 const HISTORIA = [
-  { title: "El primer encuentro", body: "Éramos apenas unos niños en 1999 aprendiendo a colorear, y entre casualidades (o quizá planes de Dios), casi siempre nos tocaba bailar juntos en los festivales escolares.", img: new URL("../img/c-sentado.jpg", import.meta.url), imgAlt: "Pareja en la ciudad" },
+  { title: "El primer encuentro", body: "Éramos apenas unos niños en 1999 aprendiendo a colorear, y entre casualidades (o quizá planes de Dios), casi siempre nos tocaba bailar juntos en los festivales escolares.", img: fotoSentado, imgAlt: "Pareja en la ciudad" },
   { title: "Un reencuentro inesperado", 
-    body: "Los años pasaron y, en la preparatoria, la amistad nos volvió a reunir. Entre risas, conversaciones y momentos compartidos, nunca dejamos de estar presentes en la vida del otro. Siempre hubo un cariño sincero que permaneció con el tiempo.", img: new URL("../img/b-abrazado.jpg", import.meta.url), imgAlt: "Pareja bailando entre árboles" },
+    body: "Los años pasaron y, en la preparatoria, la amistad nos volvió a reunir. Entre risas, conversaciones y momentos compartidos, nunca dejamos de estar presentes en la vida del otro. Siempre hubo un cariño sincero que permaneció con el tiempo.", img: fotoAbrazado, imgAlt: "Pareja bailando entre árboles" },
   { title: "Cuando la amistad se convirtió en amor", 
-    body: "Hasta que un día decidimos darle una oportunidad al amor y descubrimos que compartíamos sueños, valores y la misma ilusión de construir un futuro juntos.", img: new URL("../img/c-abrazo.jpg", import.meta.url), imgAlt: "Momento íntimo en pareja" },
-  { title:"El inicio de nuestro para siempre", body: "Hoy, con Dios en el centro de nuestra vida y la certeza de que queremos caminar juntos para siempre.", img:new URL("../img/b-sentado.jpg", import.meta.url), imgAlt:"Pareja caminando en la playa" },
+    body: "Hasta que un día decidimos darle una oportunidad al amor y descubrimos que compartíamos sueños, valores y la misma ilusión de construir un futuro juntos.", img: fotoAbrazo, imgAlt: "Momento íntimo en pareja" },
+  { title:"El inicio de nuestro para siempre", body: "Hoy, con Dios en el centro de nuestra vida y la certeza de que queremos caminar juntos para siempre.", img: fotoPlaya, imgAlt:"Pareja caminando en la playa" },
   //{ title: "La propuesta", body: "Al atardecer frente al mar, con los pies en la arena y los corazones llenos, Alexis Eduardo le pidió matrimonio a Sofía.", img: "https://images.unsplash.com/photo-1591969851586-adbbd4accf81?w=400&h=320&fit=crop&auto=format", imgAlt: "Silueta al atardecer en la playa" },
   //{ title: "Para siempre", body: "Hoy celebramos nuestro amor rodeados de quienes más queremos, a orillas del Caribe.", img: "https://images.unsplash.com/photo-1768611262527-2b22941ac27f?w=400&h=320&fit=crop&auto=format", imgAlt: "Pareja caminando en la playa" },
 ];
@@ -475,15 +473,13 @@ function HistoriaSection() {
             >
               {/* Left slot */}
               {isEven ? (
-                /* Text on left for even */
                 <div style={{ paddingRight: "0.5rem" }}>
                   <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p>
                   <p style={{ fontFamily: sans, fontSize: "0.68rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
                 </div>
               ) : (
-                /* Photo on left for odd */
                 <div style={{ paddingRight: "0.5rem", borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
-                  <img src={item.img.href} alt={item.imgAlt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 8 }} />
+                  <img src={item.img} alt={item.imgAlt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 8 }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 8, boxShadow: "inset 0 0 0 1px rgba(197,160,89,0.18)" }} />
                 </div>
               )}
@@ -495,13 +491,11 @@ function HistoriaSection() {
 
               {/* Right slot */}
               {isEven ? (
-                /* Photo on right for even */
                 <div style={{ paddingLeft: "0.5rem", borderRadius: 8, overflow: "hidden", background: "#ddd", aspectRatio: "4/3", position: "relative" }}>
-                  <img src={item.img.href} alt={item.imgAlt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 8 }} />
+                  <img src={item.img} alt={item.imgAlt} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", borderRadius: 8 }} />
                   <div style={{ position: "absolute", inset: 0, borderRadius: 8, boxShadow: "inset 0 0 0 1px rgba(197,160,89,0.18)" }} />
                 </div>
               ) : (
-                /* Text on right for odd */
                 <div style={{ paddingLeft: "0.5rem", textAlign: "left" }}>
                   <p style={{ fontFamily: serif, fontSize: "1.1rem", color: INK, fontWeight: 500, marginBottom: "0.4rem" }}>{item.title}</p>
                   <p style={{ fontFamily: sans, fontSize: "0.68rem", color: "#6a6255", lineHeight: 1.7, fontWeight: 300 }}>{item.body}</p>
